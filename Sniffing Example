@@ -1,0 +1,24 @@
+A ver muchachos:
+1.- La página del ejemplo es: http://www.binarytides.com/code-packet-sniffer-c-winpcap/
+2.- Si ya sabes colocar las referencias a la librería, colócala; sino, pasito a pasito:
+2.1.- Copias todo el código de la página del ejemplo en un nuevo main.c
+2.2.- Das click derecho en la solución y vas a propiedades (no del proyecto, ni del main.c) (mi solución se llama ConsoleApplication3)
+2.3.- Te salen dos opciones:
+	->Common Properties
+	->Configuration Properties
+      Abre Configuration Properties y busca C/C++ y tendrás algo como:
+	->Configuration Properties
+		General
+		Debugging
+		VC++ Directories
+		->C/C++
+			General
+			...
+2.4.- Das click en General y te salen en la ventana de la derecha, varios campos. Da click en Additional Include Directories y se te abrirá la opción de <edit>. La eliges y se te abre una nueva ventana.
+2.5.- Pones en abrir directorio y buscas la carpeta Include dentro de la carpeta de WpdPack que me hiciste bajar o que me bajé o no me acuerdo como la conseguí. Al final te queda algo como: "C:\user\...\WpdPack\Include"
+2.6.- Luego, abajo de la opción de C/C++, buscas la opción de Linker. Para mi, es justo la siguiente opción después de C/C++. La abres y te sale la opción de Input justito debajo de General. Le das click.
+2.7.- En el campo Additional Dependencies, das click para editar. Esta vez, no saldrá opción de buscar, así que te toca pegar el directorio de la librería wpcap.lib . Te quedará algo como "C:\user\...\WpdPack\Lib\wpcap.lib".
+NOTA: si pegas la dirección copiada desde el explorador de windows, tienes que ponerle al final "...\wpcap.lib" y no te olvides de colocarle las comillas.
+2.8.- Pones aplicar y pones aceptar o su análogo en inglés.
+3.- Puedes compilar y mandar a correr. Debería funcionarte :)
+4.- PILAS!
